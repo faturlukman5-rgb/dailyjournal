@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 10, 2026 at 08:26 AM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- Waktu pembuatan: 17 Des 2025 pada 13.44
+-- Versi server: 10.4.32-MariaDB
+-- Versi PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `article`
+-- Struktur dari tabel `article`
 --
 
 CREATE TABLE `article` (
@@ -37,7 +37,7 @@ CREATE TABLE `article` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `article`
+-- Dumping data untuk tabel `article`
 --
 
 INSERT INTO `article` (`id`, `judul`, `isi`, `gambar`, `tanggal`, `username`) VALUES
@@ -46,36 +46,12 @@ INSERT INTO `article` (`id`, `judul`, `isi`, `gambar`, `tanggal`, `username`) VA
 (3, 'menonton bola', 'menonton pertandingan bola tentang timnas,club favorit yang telah ditunggu waktu bermainya\r\n\r\n', 'bola.jpg', '2025-12-10 09:10:50', 'admin'),
 (4, 'Main Game', 'saat ada waktu kosong atau Setelah pulang kuliah teman-teman mengajak untuk bermain PS disekitar rumah salah satu teman\r\n\r\n', 'fc25.jpg', '2025-12-10 09:25:41', 'admin'),
 (5, 'Belajar', 'Pada malam hari belajar materi yang dipelajari tadi dikelas dan untuk materi besok\r\n\r\n', 'Belajar.jpg', '2025-12-10 09:10:50', 'admin'),
-(10, 'Timnas', 'Tinmas indonesia sedang berjuang untuk memdapatkan tiket menuju piala dunia', '20251226144208.jpg', '2025-12-26 14:42:08', 'admin');
+(8, 'coba ', 'hanya coba coba', '20251217185043.jpg', '2025-12-17 18:50:43', 'admin');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `gallery`
---
-
-CREATE TABLE `gallery` (
-  `id` int(11) NOT NULL,
-  `judul` varchar(100) NOT NULL,
-  `foto` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
-
---
--- Dumping data for table `gallery`
---
-
-INSERT INTO `gallery` (`id`, `judul`, `foto`) VALUES
-(1, 'Timnas', 'tinmas.jpg'),
-(2, 'Main Game\r\n', 'fc25.jpg'),
-(3, 'kuliah\r\n', 'kuliah.jgp\r\n'),
-(4, 'Belajar Kelompok', 'kerjakelompok.jpg'),
-(5, 'menonton bola\r\n', 'bola.jpg'),
-(6, 'Belajar\r\n', 'Belajar.jpg\r\n');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `user`
+-- Struktur dari tabel `user`
 --
 
 CREATE TABLE `user` (
@@ -86,7 +62,7 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `user`
+-- Dumping data untuk tabel `user`
 --
 
 INSERT INTO `user` (`id`, `username`, `password`, `foto`) VALUES
@@ -97,41 +73,29 @@ INSERT INTO `user` (`id`, `username`, `password`, `foto`) VALUES
 --
 
 --
--- Indexes for table `article`
+-- Indeks untuk tabel `article`
 --
 ALTER TABLE `article`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `gallery`
---
-ALTER TABLE `gallery`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `user`
+-- Indeks untuk tabel `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `article`
+-- AUTO_INCREMENT untuk tabel `article`
 --
 ALTER TABLE `article`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT for table `gallery`
---
-ALTER TABLE `gallery`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT for table `user`
+-- AUTO_INCREMENT untuk tabel `user`
 --
 ALTER TABLE `user`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
