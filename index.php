@@ -16,6 +16,26 @@ include "koneksi.php";
     />
   </head>
   <body>
+    <?php
+include 'koneksi.php';
+$gallery = mysqli_query($koneksi, "SELECT * FROM gallery");
+?>
+
+<h2>Gallery</h2>
+
+<div style="display:flex; flex-wrap:wrap; gap:20px">
+<?php if(mysqli_num_rows($gallery) > 0){ ?>
+  <?php while($g = mysqli_fetch_assoc($gallery)){ ?>
+    <div style="text-align:center">
+      <img src="uploads/gallery/<?= $g['foto']; ?>" width="150"><br>
+      <?= $g['judul']; ?>
+    </div>
+  <?php } ?>
+<?php } else { ?>
+  <p>Gallery masih kosong</p>
+<?php } ?>
+</div>
+
     
     <!-- nav begin -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
